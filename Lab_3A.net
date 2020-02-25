@@ -1,0 +1,11 @@
+* C:\Users\E\Documents\GitHub\ECEN-2270\Lab_3A.asc
+C1 DCsupply DCgnd 47µ
+Q1 DCsupply B1 DC1 0 FZT849
+Q3 DCgnd B1 DC1 0 2N2905A
+Q2 DCsupply B2 DC2 0 FZT849
+Q4 DCgnd B2 DC2 0 2N2905A
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\E\Documents\LTspiceXVII\lib\cmp\standard.bjt
+.backanno
+.end

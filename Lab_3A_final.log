@@ -1,0 +1,4 @@
+Circuit: * C:\Users\E\Documents\GitHub\ECEN-2270\Lab_3A_final.asc
+
+Fatal Error: Unknown subcircuit called in:
+   xx2 dc1 dc2 enc 0 dc_motor_model(1)

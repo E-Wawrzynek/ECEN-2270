@@ -15,7 +15,7 @@
 k = 0.71;           %V*s/rad
 RM = 3.6;             %Ohm, motor winding resistance
 RB = 470;           %Ohm, current limiting resistors
-beta = 5.25e-3;         %BJT Current gain
+beta = 200;         %BJT Current gain
 J = 2.6e-3;           %N*m*s/rad
 f_enc_max = 1.4e3;  %Hz, Maximum encoder frequency
 
@@ -43,3 +43,10 @@ Gc = KI/s;
 
 % Sensing gain       
 Ksense = Vs_max*13*51/(2*pi*f_enc_max);
+
+%my stuff
+zeta = 0.75;
+%Ksense =0.3445; %0.3392, as calc by the given file
+
+K_I = (k^3/(((2*zeta))^2*Ksense*J*R));
+disp(K_I);

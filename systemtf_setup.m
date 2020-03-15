@@ -50,3 +50,8 @@ zeta = 0.75;
 
 K_I = (k^3/(((2*zeta))^2*Ksense*J*R));
 disp(K_I);
+
+CI = 1e-6;
+
+RI = 1/(K_I*CI);
+disp(RI);

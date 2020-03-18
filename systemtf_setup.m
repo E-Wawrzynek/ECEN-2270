@@ -55,3 +55,6 @@ CI = 1e-6;
 
 RI = 1/(K_I*CI);
 disp(RI);
+
+% Compensator
+G_c = K_I/s; 

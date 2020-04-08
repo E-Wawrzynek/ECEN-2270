@@ -1,0 +1,22 @@
+Circuit: * C:\Users\E\Documents\LTspiceXVII\ECEN 2270\Lab4\Wave_rect.asc
+
+Per .tran options, skipping operating point for transient analysis.
+Changing Tseed to 1e-08
+
+Date: Tue Apr  7 12:55:50 2020
+Total elapsed time: 0.584 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 101695
+traniter = 101695
+tranpoints = 24213
+accept = 18210
+rejected = 6002
+matrix size = 27
+fillins = 1
+solver = Normal
+Matrix Compiler1: 1014 bytes object code size  0.4/0.3/[0.1]
+Matrix Compiler2: 1.79 KB object code size  0.3/0.5/[0.3]
+

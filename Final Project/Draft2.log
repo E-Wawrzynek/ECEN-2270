@@ -1,5 +1,6 @@
 Circuit: * C:\Users\VRcade\Documents\GitHub\csci\ECEN-2270\Final Project\Draft2.asc
 
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
 Gmin = 10
 Gmin = 1.07374

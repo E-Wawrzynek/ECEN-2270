@@ -1,0 +1,12 @@
+* C:\Users\VRcade\Documents\GitHub\csci\ECEN-2270\Lab5\Lab5B3.asc
+E1 Vxmtr 0 V0 0 5
+E2 Vin 0 V1 0 .02
+E3 V1b 0 V2 0 .5
+E4 Vecho 0 V3 0 5
+V1 V3 0 wavefile=HC_SR04_sample001b.wav chan=3
+V2 V0 0 wavefile=HC_SR04_sample001b.wav chan=0
+V3 V1 0 wavefile=HC_SR04_sample001b.wav chan=1
+V4 V2 0 wavefile=HC_SR04_sample001b.wav chan=2
+.tran 8m uic
+.backanno
+.end

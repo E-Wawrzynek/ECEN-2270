@@ -1,0 +1,51 @@
+* C:\Users\VRcade\Documents\GitHub\csci\ECEN-2270\Lab5\Lab5B4.asc
+V1 Vcc 0 5
+C1 Vcc 0 1µ
+C2 VGnd 0 10n
+R1 VGnd 0 10k
+R2 VGnd Vcc 10k
+V2 NC_01 0 AC 5m
+R3 N005 Vin 10k
+C3 N001 N005 10n
+R4 V1d N001 56k
+R5 N002 V1d 6k2
+XU1 VGnd N001 Vcc 0 V1d level.2 Avol=1Meg GBW=3Meg Slew=2.4Meg ilimit=20m rail=0.1 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+XU2 VGnd N004 Vcc 0 V1c level.2 Avol=1Meg GBW=3Meg Slew=2.4Meg ilimit=20m rail=0.1 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+XU3 VGnd N003 Vcc 0 V1b level.2 Avol=1Meg GBW=3Meg Slew=2.4Meg ilimit=20m rail=0.1 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+XU4 N007 N008 Vcc 0 N009 level.2 Avol=1Meg GBW=3Meg Slew=2.4Meg ilimit=20m rail=0.1 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+R6 0 N002 1k
+C4 N004 N002 1n
+C5 V1c N002 1n
+R7 V1c N004 75k
+R8 N006 V1c 7k5
+C6 N003 N006 10n
+R9 V1b N003 75k
+R10 N007 V1b 4k7
+R11 Signal N007 120k
+R12 Signal Vcc 10k
+R13 0 Slice 3k9
+R14 N009 Slice 10k
+R15 N008 0 3Meg3
+R16 VGnd N008 120k
+R17 N008 Threshold 75k
+C7 N008 0 10n
+V3 Threshold 0 0
+XX1 NC_02 NC_03 NC_04 NC_05 NC_06 NC_07 Vin NC_08 lab5b3
+
+* block symbol definitions
+.subckt lab5b3 V0 V1 V1b V2 V3 Vecho Vin Vxmtr
+E1 Vxmtr 0 V0 0 5
+E2 Vin 0 V1 0 .02
+E3 V1b 0 V2 0 .5
+E4 Vecho 0 V3 0 5
+V1 V3 0 wavefile=HC_SR04_sample001b.wav chan=3
+V2 V0 0 wavefile=HC_SR04_sample001b.wav chan=0
+V3 V1 0 wavefile=HC_SR04_sample001b.wav chan=1
+V4 V2 0 wavefile=HC_SR04_sample001b.wav chan=2
+.ends lab5b3
+
+* .ac dec 1000 10k 100k
+.tran 8m uic
+.lib UniversalOpamps2.sub
+.backanno
+.end
